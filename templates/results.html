@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results | Image Quantizer</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="app">
+<!--    <div class="preloader">-->
+<!--        <div class="loader">-->
+<!--            <div class="ytp-spinner">-->
+<!--                <div class="ytp-spinner-container">-->
+<!--                    <div class="ytp-spinner-rotator">-->
+<!--                        <div class="ytp-spinner-left">-->
+<!--                            <div class="ytp-spinner-circle"></div>-->
+<!--                        </div>-->
+<!--                        <div class="ytp-spinner-right">-->
+<!--                            <div class="ytp-spinner-circle"></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!--</div>-->
+    <div class="container mt-5">
+        <center><h2>Here is your Results after Gray Quantizer</h2></center>
+        <br>
+        <div class="row">
+            <div class="col-4 col-sm-6">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="/static/images/{{ values['high_p'] }}" alt="Card image"
+                         style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Upper Level Masking</h4>
+                        <p class="card-text">Value for <br><strong>OR_MASK_HIGH_END_MAPPING: {{ values['High_v'] }}<span
+                                id="high_end"></span></strong></p>
+                        <!--                    <a href="#" class="btn btn-primary">See Profile</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-6">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="/static/images/{{ values['middle_p'] }}" alt="Card image"
+                         style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Middle Level Masking</h4>
+                        <p class="card-text">Value for<br> <strong>AND_MASK_MIDDLE_END_MAPPING: {{ values['middle_v']
+                            }}<span
+                                    id="middle_end"></span></strong></p>
+                        <p class="card-text">Value for<br> <strong>OR_MASK_MIDDLE_END_MAPPING: {{ values['or_middle_v']
+                            }}<span></span></strong></p>
+                        <!--                    <a href="#" class="btn btn-primary">See Profile</a>-->
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="col-4 col-sm-6">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="/static/images/{{ values['low_p'] }}" alt="Card image"
+                         style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Low Level Masking</h4>
+                        <p class="card-text">Value for<br> <strong>AND_MASK_LOW_END_MAPPING:{{ values['Low_v'] }}<span
+                                id="low_end"></span></strong></p>
+                        <!--                    <a href="#" class="btn btn-primary">See Profile</a>-->
+                    </div>
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--<script>-->
+<!--            $( window ).on( "load", function() {-->
+<!--                $('.preloader').delay(500).fadeOut(500);-->
+<!--            }-->
+<!--</script>-->
+</body>
+</html>
